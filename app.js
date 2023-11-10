@@ -11,5 +11,19 @@ function talk ()
         "ok": "you welcome",
         "bye": "Goodbye chat later",
         "Tell me about yourself": "I am just a smallanyana chat bot, just keeping you busy with HTML, CSS and JavaScript"
+    };
+
+    var user = document.getElementById("userBox").value;
+    document.getElementById('chatLog')
+    .innerHTML = user + "<br>"; // Loops and renders a responseto to the chalog element
+
+    if(user in know)
+    {
+        document.getElementById('chatLog').innerHTML = know[user]; + "<br>"
+    }
+
+    else
+    {
+        document.getElementById('chatLog').innerHTML = "Sorry I dont understand  <br>"
     }
 }
